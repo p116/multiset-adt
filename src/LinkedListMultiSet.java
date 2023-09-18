@@ -37,4 +37,8 @@ public class LinkedListMultiSet implements Multiset {
         }
         return false;
     }
+
+    public boolean is_empty() {
+        return front == null;
+    }
 }
