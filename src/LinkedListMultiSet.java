@@ -28,4 +28,13 @@ public class LinkedListMultiSet implements Multiset {
             current = current.next;
         }
     }
+
+    public boolean contains(long item) {
+        Node current = front;
+        while (current != null) {
+            if (current.item == item) return true;
+            current = current.next;
+        }
+        return false;
+    }
 }
