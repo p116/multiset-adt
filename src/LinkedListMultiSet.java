@@ -16,6 +16,16 @@ public class LinkedListMultiSet implements Multiset {
     }
 
     public void remove(long item) {
-
+        Node current = front, previous = null;
+        while (current != null) {
+            if (current.item == item) {
+                size -= 1;
+                if (previous != null) previous.next = current.next;
+                else front.next = current.next;
+                return;
+            }
+            previous = current;
+            current = current.next;
+        }
     }
 }
